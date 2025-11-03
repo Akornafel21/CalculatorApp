@@ -1,12 +1,10 @@
 package uebung4;
 
-import javax.naming.InvalidNameException;
-
-public class Doktor implements Displayable {
+public class Doctor implements Displayable {
     private String name;
     private int doctorId;
 
-    public Doktor(String name, int doctorId) {
+    public Doctor(String name, int doctorId) {
         // Überprüfung, ob der Name gültig ist:
         // 1. name == null → kein Wert übergeben
         // 2. name.trim().isEmpty() → der Name besteht nur aus Leerzeichen
@@ -20,7 +18,7 @@ public class Doktor implements Displayable {
         this.doctorId = doctorId;
     }
 
-    public int getDoktorId() {
+    public int getDoctorId() {
         return doctorId;
     }
 

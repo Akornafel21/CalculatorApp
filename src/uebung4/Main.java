@@ -5,6 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         //List<Displayable> liste = new ArrayList<>();
+        HealthManagement hm = new HealthManagement();
         Set<Patient> patienten = new HashSet<>();
 
         Patient p1 = new Patient("Anna", 21);
@@ -15,16 +16,16 @@ public class Main {
         patienten.add(p2);
         patienten.add(p3);
 
-        Map<Integer, Doktor> doktoren = new HashMap<>();
+        Map<Integer, Doctor> doctors = new HashMap<>();
 
-        Doktor d1 = new Doktor("Tim", 464);
-        Doktor d2 = new Doktor("Mary", 332);
+        Doctor d1 = new Doctor("Tim", 464);
+        Doctor d2 = new Doctor("Mary", 332);
 
-        doktoren.put(d1.getDoktorId(), d1);
-        doktoren.put(d2.getDoktorId(), d2);
+        doctors.put(d1.getDoctorId(), d1);
+        doctors.put(d2.getDoctorId(), d2);
 
         zeigeAllePatienten(patienten);
-        zeigeAlleAerzte(doktoren);
+        zeigeAlleAerzte(doctors);
 
 
         // Schleife über alle Objekte und displayInfo() aufrufen
@@ -39,9 +40,9 @@ public class Main {
         }
     }
 
-    public static void zeigeAlleAerzte(Map<Integer, Doktor> doktoren){
+    public static void zeigeAlleAerzte(Map<Integer, Doctor> doktoren){
         System.out.println("Alle Aerzte: ");
-        for (Doktor d : doktoren.values()) {
+        for (Doctor d : doktoren.values()) {
             d.displayInfo();
         }
     }
