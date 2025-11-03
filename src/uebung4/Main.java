@@ -6,6 +6,13 @@ public class Main {
     public static void main(String[] args) {
         //List<Displayable> liste = new ArrayList<>();
         HealthManagement hm = new HealthManagement();
+
+        try {
+            Doctor d = hm.findDoctorById(546);
+            System.out.println("Gefunden: ");
+
+        }
+
         Set<Patient> patienten = new HashSet<>();
 
         Patient p1 = new Patient("Anna", 21);
